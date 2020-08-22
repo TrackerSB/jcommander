@@ -1,6 +1,9 @@
 JCommander
 ==========
 
+![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/bayern.steinbrecher/JCommander?server=https%3A%2F%2Foss.sonatype.org)
+![Maven Central](https://img.shields.io/maven-central/v/bayern.steinbrecher/JCommander)
+
 This is an annotation based parameter parsing framework for Java 8 and 9+.
 
 Here is a quick example:
