@@ -3,7 +3,7 @@
 object This {
     val version = "1.80"
     val artifactId = "jcommander"
-    val groupId = "com.beust"
+    val groupId = "bayern.steinbrecher"
     val description = "Command line parsing library for Java"
     val url = "https://jcommander.org"
     val scm = "github.com/cbeust/jcommander"
