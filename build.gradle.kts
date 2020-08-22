@@ -155,8 +155,8 @@ with(publishing) {
                 uri("https://oss.sonatype.org/content/repositories/snapshots/") else
                 uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
             credentials {
-                username = project.findProperty("sonatypeUser") as? String
-                password = project.findProperty("sonatypePassword") as? String
+                username = project.findProperty("ossrhUsername") as? String
+                password = project.findProperty("ossrhPassword") as? String
             }
         }
         maven {
