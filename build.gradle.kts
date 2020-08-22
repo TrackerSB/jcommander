@@ -166,6 +166,7 @@ with(publishing) {
     }
 }
 
-with(signing) {
-    sign(publishing.publications.getByName("custom"))
+signing {
+    useGpgCmd()
+    sign(publishing.publications["custom"])
 }
