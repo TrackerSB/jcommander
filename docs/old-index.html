@@ -71,7 +71,7 @@ JCommander is a very small Java framework that makes it trivial to parse command
 You annotate fields with descriptions of your options:
 
 <pre class="brush: java">
-import com.beust.jcommander.Parameter;
+import Parameter;
 
 public class JCommanderExample {
   @Parameter
@@ -638,7 +638,7 @@ public interface IDefaultProvider {
   /**
    * @param optionName The name of the option as specified in the names() attribute
    * of the @Parameter option (e.g. "-file").
-   * 
+   *
    * @return the default value for this option.
    */
   String getDefaultValueFor(String optionName);
@@ -746,7 +746,7 @@ point.
 You can invoke <tt>usage()</tt> on the <tt>JCommander</tt> instance that you used to parse your command line in order to generate a summary of all the options that your program understands:
 
 <pre class="brush: plain">
-Usage: &lt;main class&gt; [options] 
+Usage: &lt;main class&gt; [options]
   Options:
     -debug          Debug mode (default: false)
     -groups         Comma-separated list of group names to be run
@@ -912,7 +912,7 @@ You can download JCommander from the following locations:
 <ul>
   <li><a href="http://github.com/cbeust/jcommander">Source on github</a></li>
   <li>Gradle
-  
+
   <pre class="brush: plain">
     compile "com.beust:jcommander:1.48"
   </pre>

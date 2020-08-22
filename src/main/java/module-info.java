@@ -17,8 +17,8 @@
  */
 
 module bayern.steinbrecher.JCommander {
-    exports com.beust.jcommander;
-    exports com.beust.jcommander.converters;
-    exports com.beust.jcommander.defaultprovider;
-    exports com.beust.jcommander.validators;
+    exports bayern.steinbrecher.jcommander;
+    exports bayern.steinbrecher.jcommander.converters;
+    exports bayern.steinbrecher.jcommander.defaultprovider;
+    exports bayern.steinbrecher.jcommander.validators;
 }

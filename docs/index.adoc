@@ -34,18 +34,18 @@ You annotate fields with descriptions of your options:
 
 [source,java]
 ----
-import com.beust.jcommander.Parameter;
- 
+import Parameter;
+
 public class Args {
   @Parameter
   private List<String> parameters = new ArrayList<>();
- 
+
   @Parameter(names = { "-log", "-verbose" }, description = "Level of verbosity")
   private Integer verbose = 1;
- 
+
   @Parameter(names = "-groups", description = "Comma-separated list of group names to be run")
   private String groups;
- 
+
   @Parameter(names = "-debug", description = "Debug mode")
   private boolean debug = false;
 }
@@ -61,7 +61,7 @@ JCommander.newBuilder()
   .addObject(args)
   .build()
   .parse(argv);
- 
+
 Assert.assertEquals(jct.verbose.intValue(), 2);
 ----
 
@@ -74,7 +74,7 @@ class Main {
     int length;
     @Parameter(names={"--pattern", "-p"})
     int pattern;
- 
+
     public static void main(String ... argv) {
         Main main = new Main();
         JCommander.newBuilder()
@@ -83,7 +83,7 @@ class Main {
             .parse(argv);
         main.run();
     }
- 
+
     public void run() {
         System.out.printf("%d %d", length, pattern);
     }
@@ -514,7 +514,7 @@ So far, all the `@Parameter` annotations we have seen had defined an attribute c
 ----
 @Parameter(description = "Files")
 private List<String> files = new ArrayList<>();
- 
+
 @Parameter(names = "-debug", description = "Debugging level")
 private Integer debug = 1;
 ----
@@ -537,7 +537,7 @@ Parameters can be private:
 public class ArgsPrivate {
   @Parameter(names = "-verbose")
   private Integer verbose = 1;
- 
+
   public Integer getVerbose() {
     return verbose;
   }
@@ -605,7 +605,7 @@ JCommander.newBuilder()
     .addObject(new Object[] { m , s })
     .build()
     .parse(argv);
- 
+
 Assert.assertEquals(m.master, "master");
 Assert.assertEquals(s.slave, "slave");
 ----
@@ -783,7 +783,7 @@ private static final IDefaultProvider DEFAULT_PROVIDER = new IDefaultProvider() 
 };
 
 // ...
- 
+
 JCommander jc = JCommander.newBuilder()
     .addObject(new Args())
     .defaultProvider(DEFAULT_PROVIDER)
@@ -819,23 +819,23 @@ Words such as `"commit"` above are called "commands" in JCommander, and you can 
 ----
 @Parameters(separators = "=", commandDescription = "Record changes to the repository")
 private class CommandCommit {
- 
+
   @Parameter(description = "The list of files to commit")
   private List<String> files;
- 
+
   @Parameter(names = "--amend", description = "Amend")
   private Boolean amend = false;
- 
+
   @Parameter(names = "--author")
   private String author;
 }
 
 @Parameters(commandDescription = "Add file contents to the index")
 public class CommandAdd {
- 
+
   @Parameter(description = "File patterns to add to the index")
   private List<String> patterns;
- 
+
   @Parameter(names = "-i")
   private Boolean interactive = false;
 }
@@ -855,7 +855,7 @@ JCommander jc = JCommander.newBuilder()
     .build();
 
 jc.parse("-v", "commit", "--amend", "--author=cbeust", "A.java", "B.java");
- 
+
 Assert.assertTrue(cm.verbose);
 Assert.assertEquals(jc.getParsedCommand(), "commit");
 Assert.assertTrue(commit.amend);
@@ -920,7 +920,7 @@ private class ArgsI18N2 {
 }
 ----
 
-Your bundle needs to define this key: 
+Your bundle needs to define this key:
 
 [source,bash]
 ----
@@ -941,17 +941,17 @@ class Delegate {
   @Parameter(names = "-port")
   private int port;
 }
- 
+
 class MainParams {
   @Parameter(names = "-v")
   private boolean verbose;
- 
+
   @ParametersDelegate
   private Delegate delegate = new Delegate();
 }
 ----
 
-The example above specifies a delegate parameter Delegate which is then referenced in MainParams. You only need to add a `MainParams` object to your 
+The example above specifies a delegate parameter Delegate which is then referenced in MainParams. You only need to add a `MainParams` object to your
 JCommander configuration in order to use the delegate:
 
 [source,java]
@@ -1036,12 +1036,12 @@ Courtesy of Paul King:
 [source,groovy]
 ----
 import com.beust.jcommander.*
- 
+
 class Args {
   @Parameter(names = ["-f", "--file"], description = "File to load. Can be specified multiple times.")
   List<String> file
 }
- 
+
 new Args().with {
   JCommander.newBuilder().addObject(it).build().parse(argv)
   file.each { println "file: ${new File(it).name}" }

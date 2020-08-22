@@ -1,26 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-  
+
 <suite name="JCommander">
 
   <test name="JCommander tests">
     <classes>
-      <class name="com.beust.jcommander.command.CommandTest" />
-      <class name="com.beust.jcommander.command.CommandAliasTest" />
-      <class name="com.beust.jcommander.ConverterFactoryTest" />
-      <class name="com.beust.jcommander.DefaultProviderTest" />
-      <class name="com.beust.jcommander.DefaultValueTest" />
-      <class name="com.beust.jcommander.JCommanderTest" />
-      <class name="com.beust.jcommander.ParametersDelegateTest" />
-      <class name="com.beust.jcommander.dynamic.DynamicParameterTest" />
-      <class name="com.beust.jcommander.VariableArityTest" />
-      <class name="com.beust.jcommander.MethodSetterTest" />
-      <class name="com.beust.jcommander.PositiveIntegerTest" />
-      <class name="com.beust.jcommander.FinderTest" />
-      <class name="com.beust.jcommander.CmdTest" />
-      <class name="com.beust.jcommander.DefaultUsageFormatterTest" />
-      <class name="com.beust.jcommander.UnixStyleUsageFormatterTest" />
-      <class name="com.beust.jcommander.StringsTest" />
-      <class name="com.beust.jcommander.defaultprovider.EnvironmentVariableDefaultProviderTest" />
+      <class name="bayern.steinbrecher.jcommander.command.CommandTest" />
+      <class name="bayern.steinbrecher.jcommander.command.CommandAliasTest" />
+      <class name="bayern.steinbrecher.jcommander.ConverterFactoryTest" />
+      <class name="bayern.steinbrecher.jcommander.DefaultProviderTest" />
+      <class name="bayern.steinbrecher.jcommander.DefaultValueTest" />
+      <class name="bayern.steinbrecher.jcommander.JCommanderTest" />
+      <class name="bayern.steinbrecher.jcommander.ParametersDelegateTest" />
+      <class name="bayern.steinbrecher.jcommander.dynamic.DynamicParameterTest" />
+      <class name="bayern.steinbrecher.jcommander.VariableArityTest" />
+      <class name="bayern.steinbrecher.jcommander.MethodSetterTest" />
+      <class name="bayern.steinbrecher.jcommander.PositiveIntegerTest" />
+      <class name="bayern.steinbrecher.jcommander.FinderTest" />
+      <class name="bayern.steinbrecher.jcommander.CmdTest" />
+      <class name="bayern.steinbrecher.jcommander.DefaultUsageFormatterTest" />
+      <class name="bayern.steinbrecher.jcommander.UnixStyleUsageFormatterTest" />
+      <class name="bayern.steinbrecher.jcommander.StringsTest" />
+      <class name="bayern.steinbrecher.jcommander.defaultprovider.EnvironmentVariableDefaultProviderTest" />
     </classes>
   </test>
 
