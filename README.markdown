@@ -1,7 +1,7 @@
 JCommander
 ==========
 
-This is an annotation based parameter parsing framework for Java 8.
+This is an annotation based parameter parsing framework for Java 8 and 9+.
 
 Here is a quick example:
 
